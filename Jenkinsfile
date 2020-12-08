@@ -10,7 +10,7 @@ pipeline {
       steps {
         git 'https://github.com/Biju-vinoth/cicd-k8s-demo.git'
         script{
-                def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
+                def mvnHome = tool name: 'Maven', type: 'maven'
                 sh "${mvnHome}/bin/mvn package"
         }
       }
